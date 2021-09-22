@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/style_header.css">
     <link rel="stylesheet" href="assets/style_footer.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.css">
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
+  
+    <script src="assets/js/jquery-3.2.1.js"></script>
+    <script src="assets/js/events.js"></script>
     <title>Header</title>
 </head>
 <body>
@@ -15,14 +20,15 @@
             <p class="container_name_text">DIANA</p>
         </div>
 
+        <ul class="container_menu">
+            <li class="menu_item">Inicio</li>
+            <li class="menu_item">Acerca</li>
+            <li class="menu_item">Contacto</li>
+        </ul>
         
-            <ul class="container_menu">
-                <li class="menu_item">Home</li>
-                <li class="menu_item">About</li>
-                <li class="menu_item">Contact</li>
-            </ul>
-        
-
+        <label id="bars">
+            <i class="fa fa-bars"></i>
+        </label>
     </header>
 
 
@@ -31,7 +37,38 @@
     </main>
     
     <footer class="footer">
-        <p>Hola mundo</p>
+        <div class="social_media">
+            <p class="title_menu_footer">Redes Sociales</p>
+            <ul>
+                <li>
+                    <a href="#">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span class="fa fa-facebook-f" ></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span class="fa fa-twitter"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span class="fa fa-whatsapp"></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </footer>
 </body>
 </html>
