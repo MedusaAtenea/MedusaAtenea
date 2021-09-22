@@ -23,9 +23,34 @@
         <ul class="container_menu">
             <li class="menu_item">Inicio</li>
             <li class="menu_item">Acerca</li>
-            <li class="menu_item">Contacto</li>
+            <li id="contact_li" class="menu_item">Contacto</li>
         </ul>
         
+        <div class="contact_container">
+            <span id="close_contact"><i  class="fa fa-close"></i></span>
+
+            <label for="user_email">Nombre:</label>
+            <input type="text" id="user_name" placeholder="usuario">
+            
+            <label for="user_email">Correo Electronico:</label>
+            <input type="text" id="user_email" placeholder="correo@cuenta.com">
+            
+            <label for="user_email">Numero de telefono:</label>
+            <input type="tel" id="user_phone_number" placeholder="+52 8123456789">
+            
+            <label>En que estas interesado:</label>
+            
+              <div class="content-select">
+                <select>
+                    <option>Option 1</option>
+                    <option>Option 2</option>
+                    <option>Option 3</option>
+                </select>
+                <i></i>
+            </div>
+            
+        </div>
+
         <label id="bars">
             <i class="fa fa-bars"></i>
         </label>
