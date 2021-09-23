@@ -18,7 +18,7 @@ body{
     background: url("./images/stars.png");
     background-repeat: repeat;
     position: relative;
-    overflow: visible;
+    overflow: hidden;
 }
 .ground {
     /*background: url("./images/cabin-transparent.png");*/
@@ -71,7 +71,7 @@ body{
     background: url("./svgs/ground/layer-1.svg");
     /* background: url("./images/landscape/layer-def-2.png"); */
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: cover;
     z-index: 2;   
 }
 .grass__layer--2 {
@@ -83,7 +83,7 @@ body{
     background: url("./svgs/ground/layer-2.svg");
     /* background: url("./images/landscape/layer-def-2.png"); */
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: cover;
     z-index: 1;
 }
 .house {
@@ -99,9 +99,8 @@ body{
 }
 .hell {
     width: 100%;
-    height: 2000px;
-    background-color: transparent;
-    background-color: blue;
+    height: 50vh;
+    background: linear-gradient(180deg, rgb(21, 22, 42) 40%, brown 90%);
     position: relative;
 }
 /*
