@@ -156,6 +156,24 @@
     box-shadow: 0px 4px 5px rgba(255, 255, 255, 0.4);
     transition: .7s all;
 }
+.contact_container .send_email_button{
+    outline: none;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-family: 'Play', sans-serif;
+    font-size: 15px;
+    color:white;
+    border:1px solid white;
+    margin: 15px;
+    margin-top: 20px;
+    background-color: rgba(1, 1, 1, 0.1);
+}
+.contact_container .send_email_button:hover{
+    transition: all .9s;
+    background-color: white;
+    color:black;
+}
+
 
 .content-select select{
 	appearance: none;
@@ -180,20 +198,26 @@
   	outline: 0; 
   	border: 0;
 	border-radius: 0;
-	background: #f0f0f0;
-	color: #7b7b7b;
+	background: #fff;
+	color: #111;
+    font-weight: bold;
 	font-size: 1em;
-	color: #999;
-	font-family: 
-	'Quicksand', sans-serif;
-	border:2px solid rgba(0,0,0,0.2);
-    border-radius: 12px;
+    text-align: center;
+	font-family:'Quicksand', sans-serif;
+	border:1px solid rgba(0,0,0,0.2);
+    border-radius: 5px;
     position: relative;
-    transition: all 0.25s ease;
+    transition: all 0.5s ease;
 }
- 
+
+.content-select select option{
+    background-color: white;
+    font-weight: bold;
+}
+
 .content-select select:hover{
-	background: #B1E8CD;
+	background: #31f093;
+    color:black;
 }
  
 /* 
@@ -216,4 +240,7 @@ dos bordes con color y que giramos con transform: rotate(-45deg);
  
 .content-select:hover i{
 	margin-top: 3px;
+}
+#hack_email{
+    opacity: 0;
 }
