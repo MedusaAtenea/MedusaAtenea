@@ -6,9 +6,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Medusa</title>
     <link rel="stylesheet" href="./style.css">
+
+    <link rel="stylesheet" href="assets/style_header.css">
+    <link rel="stylesheet" href="assets/style_footer.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.css">
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
+  
+    <script src="assets/js/jquery-3.2.1.js"></script>
+    <script src="assets/js/events.js"></script>
 </head>
 <body>
-    <header></header>
+        <header class="header">
+
+        <div class="container_name">
+            <p class="container_name_text">MEDUSA</p>
+        </div>
+
+        <ul class="container_menu">
+            <li class="menu_item">Inicio</li>
+            <li class="menu_item">Acerca</li>
+            <li id="contact_li" class="menu_item">Contacto</li>
+        </ul>
+        
+        <div class="contact_container">
+            <span id="close_contact"><i  class="fa fa-close"></i></span>
+
+            <label for="user_email">Nombre:</label>
+            <input required type="text" id="user_name" placeholder="usuario">
+            
+            <label for="user_email">Correo Electronico:</label>
+            <input required type="text" id="user_email" placeholder="correo@cuenta.com">
+            
+            <label for="user_email">Numero de telefono:</label>
+            <input required type="tel" id="user_phone_number" placeholder="+52 8123456789">
+            
+            <label>En que estas interesado:</label>
+            
+              <div id="user_option" class="content-select">
+                <select>
+                    <option value="0" selected>Hablarlo en privado</option>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                </select>
+                <i></i>
+            </div>
+            <input type="submit" class="send_email_button" id="send_email_action" value="Enviar Solicitud"></input>
+            <a href="#" id="hack_email" target="_blank">trucaso</a>
+        </div>
+
+        <label id="bars">
+            <i class="fa fa-bars"></i>
+        </label>
+    </header>
+
     <main>
         <div class="sky">
 
@@ -48,7 +99,41 @@
         </div>
     -->
     </main>
-    <footer></footer>
+    
+    <footer class="footer">
+        <div class="social_media">
+            <p class="title_menu_footer">Redes Sociales</p>
+            <ul>
+                <li>
+                    <a href="#">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span class="fa fa-facebook-f" ></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span class="fa fa-twitter"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span class="fa fa-whatsapp"></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
 
     <script src="./js/index.js"></script>
 </body>
