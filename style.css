@@ -97,11 +97,64 @@ body{
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
-.hell {
+.position-between-sky-and-hell {
     width: 100%;
     height: 50vh;
-    background: linear-gradient(180deg, rgb(21, 22, 42) 40%, brown 90%);
+    background: linear-gradient(180deg, rgb(21, 22, 42) 40%, rgb(154, 88, 51) 90%);
     position: relative;
+}
+.hell {
+    width: 100%;
+    height: 150vh;
+    position: relative;
+    background: rgb(53, 30, 17);
+}
+.cave-top {
+    width: 100%;
+    height: 30vh;
+    position: relative;
+    overflow-y: visible;
+}
+.cave-layer--0 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 2;    
+}
+.cave-layer--0 img {
+    width: 100%;
+}
+.cave-layer--1 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;    
+    z-index: 1;
+}
+.cave-layer--1 img {
+    width: 100%;
+}
+.hell .surface {
+    width: 100%;
+    height: 40vh;
+    position: absolute;
+    bottom: 0;
+}
+.hell .surface img {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+.area-for-person {
+    width: 200px;
+    height: 400px; 
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+}
+.area-for-person img {
+    width: 100%;
 }
 /*
 .house {
