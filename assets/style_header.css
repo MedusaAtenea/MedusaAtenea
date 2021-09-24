@@ -156,7 +156,7 @@
     box-shadow: 0px 4px 5px rgba(255, 255, 255, 0.4);
     transition: .7s all;
 }
-.contact_container .send_email_button{
+.contact_container button{
     outline: none;
     text-decoration: none;
     padding: 10px 20px;
@@ -168,7 +168,7 @@
     margin-top: 20px;
     background-color: rgba(1, 1, 1, 0.1);
 }
-.contact_container .send_email_button:hover{
+.contact_container button:hover{
     transition: all .9s;
     background-color: white;
     color:black;

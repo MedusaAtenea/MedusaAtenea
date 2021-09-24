@@ -28,19 +28,19 @@
             <li id="contact_li" class="menu_item">Contacto</li>
         </ul>
         
-        <div class="contact_container">
+        <form class="contact_container" id="my-form-status" action="https://formspree.io/f/xbjqwbpr" method="POST">
             <span id="close_contact"><i  class="fa fa-close"></i></span>
 
-            <label for="user_email">Nombre:</label>
-            <input required type="text" id="user_name" placeholder="usuario">
+            <label for="user_name">Nombre:</label>
+            <input required type="text" id="user_name" placeholder="Nombre apropiado">
             
-            <label for="user_email">Correo Electronico:</label>
-            <input required type="text" id="user_email" placeholder="correo@cuenta.com">
+            <label for="user_email">Correo Electrónico:</label>
+            <input required type="email" id="user_email" name="email" placeholder="correo@cuenta.com">
             
-            <label for="user_email">Numero de telefono:</label>
-            <input required type="tel" id="user_phone_number" placeholder="+52 8123456789">
+            <label for="user_phone_number">Número de teléfono:</label>
+            <input required type="text" id="user_phone_number" placeholder="+52 8123456789">
             
-            <label>En que estas interesado:</label>
+            <label>En que estás interesado:</label>
             
               <div id="user_option" class="content-select">
                 <select>
@@ -51,9 +51,9 @@
                 </select>
                 <i></i>
             </div>
-            <input type="submit" class="send_email_button" id="send_email_action" value="Enviar Solicitud"></input>
-            <a href="#" id="hack_email" target="_blank">trucaso</a>
-        </div>
+            <button type="submit" class="send_email_button" id="send_email_action" >Enviar Solicitud</button>
+       
+        </form>
 
         <label id="bars">
             <i class="fa fa-bars"></i>
