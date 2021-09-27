@@ -1,0 +1,469 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%;
+}
+body{
+    font-size: 1.6rem;
+    background: linear-gradient(180deg, rgba(0,0,0,1) 40%, rgba(54,0,25,1) 90%);
+    font-family: sans-serif;
+}
+
+.sky {
+    min-height: 200vh;
+    width: 100%;
+    /* background: url("./images/stars.png");
+    background-repeat: repeat; */
+    position: relative;
+    overflow: hidden;
+}
+.sky .principal-info {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(54,0,25,1);
+    padding-bottom: 2rem;
+}
+.sky .principal-info .first-half {
+    width: 100%;
+}
+.sky .principal-info .first-half > div{
+    width: 100%;
+}
+.sky .principal-info .second-half {
+    display: none;
+}
+.sky .principal-info .first-half .name-of-mark {
+    padding: 1rem;
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.sky .principal-info .first-half .name-of-mark span {
+    color: rgba(255,255,255,1);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+.sky .principal-info .first-half .summary-of-mark {
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.sky .principal-info .first-half .summary-of-mark span{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+.sky .principal-info .first-half .submit{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.sky .principal-info .first-half .submit button{
+    border: 0.1rem rgba(255, 255, 255, 0.1) solid;
+    
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+.container-slider-knowledges {
+    width: 100%;
+    position: relative;
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container-slider-knowledges .divisor-top{
+    width: 100%;
+    z-index: 2;
+}
+.container-slider-knowledges .divisor-top picture{
+    width: 100%;
+}
+.container-slider-knowledges .divisor-top img{
+    width: 100%;
+}
+.container-slider-knowledges .main-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 1;
+}
+.container-slider-knowledges .second-container{
+    background-color: black;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    opacity: 1;
+    z-index: 1;
+}
+.container-slider-knowledges .second-container:nth-child(2n){
+    flex-direction: row-reverse;
+}
+.container-slider-knowledges .second-container .image{
+    width: 40%;
+    background-color: black;
+}
+.container-slider-knowledges .second-container .image img{
+    width: 100%;
+}
+.container-slider-knowledges .second-container .info{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.container-slider-knowledges .second-container.first {
+    display: flex;
+    animation-name: second-container-first;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    opacity: 1;
+    
+}
+@keyframes second-container-first{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.container-slider-knowledges .second-container .menu .title{
+    margin: 1rem 0 0 0;
+}
+.container-slider-knowledges .second-container .menu .title span{
+    text-transform: uppercase;
+}
+
+.container-slider-knowledges .second-container .menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container-slider-knowledges .second-container .menu picture{
+    display: flex;
+    justify-content: center;
+}
+.container-slider-knowledges .second-container .menu picture img{
+    width: 100%;
+}
+.container-slider-knowledges .second-container .menu .buttons{
+    display: flex;
+}
+.container-slider-knowledges .second-container .menu button{
+    background: black;
+    border: 0.1rem rgba(255, 255, 255, 0.1) solid;
+    margin: 1rem 0.5rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    color: rgb(248, 81, 73);
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.area-for-astronaut{
+    height: 80px;
+    position: absolute;
+    left: calc(50% - 37.5px);
+    top: -50px;
+    z-index: 2;
+}
+.area-for-astronaut img{
+    height: 100%;
+}
+.divisor{
+    width: 90%;
+    position: relative;
+    left: 5%;
+    border-top: .1rem rgba(255, 255, 255, 0.1) solid;
+}
+.container-who-can-i-help{
+    width: 100%;
+    position: relative;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.container-who-can-i-help .main-container{
+    width: 100%;
+}
+.container-who-can-i-help .main-container .title{
+    background-color: rgba(54,0,25,1);
+    display: flex;
+    justify-content: center;
+}
+.container-who-can-i-help .main-container .title span{
+    margin: 1rem 0;
+    font-size: 2rem;
+    font-family: monospace;
+    color:rgb(248, 81, 73);
+    font-weight: bold;
+}
+
+/*prueba*/
+.container-prueba{
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+.container-prueba::-webkit-scrollbar{
+    display: none;
+}
+.prueba1 {
+    width: 100%;
+    height: 100px;
+    background-color: red;
+    flex-grow: 0;
+    flex-shrink: 0;
+    object-fit: cover;
+    scroll-snap-align: center;
+}
+.prueba2 {
+    width: 100%;
+    height: 100px;
+    background-color: blue;
+    flex-grow: 0;
+    flex-shrink: 0;
+    object-fit: cover;
+    scroll-snap-align: center;
+}
+
+
+
+
+/*Animacion para logo*/
+/*
+@keyframes opacityForLogoMedusa {
+    0% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 0.9;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
+*/
+.ground {
+    /*background: url("./images/cabin-transparent.png");*/
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    bottom: 0;
+}
+.grass {
+    position: absolute;
+    width: 100%;
+    height: 1000px;
+    
+    /*
+    
+    width: 100%;
+    
+    */
+    bottom: 0;
+    left: 0;
+}
+.grass-bottom {
+    z-index: 0;
+    width: 100%;
+    height: 30%;
+    position: absolute;
+    bottom: 0;
+    background-color: rgb(21, 22, 42);
+    z-index: 3;
+}
+.grass__layer--0 {
+    z-index: 3;
+    position: absolute;
+    left: 0;
+    top: 10%;
+    width: 100%;
+    height: 100%;
+    background: url("./svgs/ground/layer-0.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background: url("./svgs/ground/layer-0.svg") no-repeat center center cover;
+    background-size: contain;    */
+}
+.grass__layer--1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url("./svgs/ground/layer-1.svg");
+    /* background: url("./images/landscape/layer-def-2.png"); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 2;   
+}
+.grass__layer--2 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url("./svgs/ground/layer-2.svg");
+    /* background: url("./images/landscape/layer-def-2.png"); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+}
+.house {
+    position: absolute;
+    bottom: 40%;
+    left: 40%;
+    z-index: 2;
+    width: 300px;
+    height: 300px;
+    background: url("./svgs/house.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.position-between-sky-and-hell {
+    width: 100%;
+    height: 50vh;
+    background: linear-gradient(180deg, rgb(21, 22, 42) 40%, rgb(154, 88, 51) 90%);
+    position: relative;
+}
+.hell {
+    width: 100%;
+    height: 150vh;
+    position: relative;
+    background: rgb(53, 30, 17);
+}
+.cave-top {
+    width: 100%;
+    height: 30vh;
+    position: relative;
+    overflow-y: visible;
+}
+.cave-layer--0 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 2;    
+}
+.cave-fire-layer-background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 0;
+}
+.cave-fire-layer-background img {
+    width: 100%;
+}
+.cave-layer--0 img {
+    width: 100%;
+}
+.cave-layer--1 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;    
+    z-index: 1;
+}
+.cave-layer--1 img {
+    width: 100%;
+}
+.hell .surface {
+    width: 100%;
+    height: 40vh;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.hell .surface img {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    
+}
+.area-for-person {
+    width: 200px;
+    height: 400px; 
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+}
+.area-for-person img {
+    width: 100%;
+}
+/*
+.house {
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+    width: 40%;
+    height: 100%;
+    background: url("./images/house.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+    
+}
+*/
+/*color: rgb(229, 168, 122);*/
+/*
+
+*/
+/*
+.parallax__stage{
+    height: 100vh;
+    left: 0;
+    overflow: auto;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    perspective: 1;
+}
+.parallax__layer{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.parallax__layer--0{
+    background-color: rgba(0,0,0,calc(1 / 10));
+    transform: translateZ(-3px)
+}
+
+.parallax__layer--1{
+    background-color: rgba(0,0,0,calc(2 / 10));
+    transform: translateZ(-2px)
+}
+.parallax__layer--2{
+    background-color: rgba(0,0,0,calc(3 / 10));
+    transform: translateZ(-1px)
+}
+*/
