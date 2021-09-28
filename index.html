@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Medusa Atenea</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
 </head>
 
 <body>
@@ -41,7 +42,7 @@
                 <div class="divisor-top">
                     <picture>
                         <img src="./svgs/divisor-1.svg" alt="">
-                    </picture>    
+                    </picture>
                 </div>
                 <div class="title-for-slider">
                     <div class="divisor">
@@ -62,7 +63,7 @@
                         <div class="info">
                             <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt necessitatibus
                                 aperiam quas dolore quam atque, laboriosam inventore, at explicabo minus aliquid
-                                perspiciatis labore rerum omnis quod accusamus numquam in impedit!</span> 
+                                perspiciatis labore rerum omnis quod accusamus numquam in impedit!</span>
                         </div>
                     </div>
                     <div class="second-container">
@@ -74,7 +75,7 @@
                         <div class="info">
                             <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt necessitatibus
                                 aperiam quas dolore quam atque, laboriosam inventore, at explicabo minus aliquid
-                                perspiciatis labore rerum omnis quod accusamus numquam in impedit!</span> 
+                                perspiciatis labore rerum omnis quod accusamus numquam in impedit!</span>
                         </div>
                     </div>
                     <div class="second-container">
@@ -86,7 +87,7 @@
                         <div class="info">
                             <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt necessitatibus
                                 aperiam quas dolore quam atque, laboriosam inventore, at explicabo minus aliquid
-                                perspiciatis labore rerum omnis quod accusamus numquam in impedit!</span> 
+                                perspiciatis labore rerum omnis quod accusamus numquam in impedit!</span>
                         </div>
                     </div>
                     <div class="second-container">
@@ -98,9 +99,10 @@
                         <div class="info">
                             <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt necessitatibus
                                 aperiam quas dolore quam atque, laboriosam inventore, at explicabo minus aliquid
-                                perspiciatis labore rerum omnis quod accusamus numquam in impedit!</span> 
+                                perspiciatis labore rerum omnis quod accusamus numquam in impedit!</span>
                         </div>
-                    </div><div class="second-container">
+                    </div>
+                    <div class="second-container">
                         <div class="image">
                             <picture>
                                 <img src="./images/slider-with-knowledges/amarre.jpg" alt="">
@@ -109,7 +111,7 @@
                         <div class="info">
                             <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt necessitatibus
                                 aperiam quas dolore quam atque, laboriosam inventore, at explicabo minus aliquid
-                                perspiciatis labore rerum omnis quod accusamus numquam in impedit!</span> 
+                                perspiciatis labore rerum omnis quod accusamus numquam in impedit!</span>
                         </div>
                     </div>
                 </div>
@@ -123,7 +125,7 @@
                 <div class="divisor-bottom">
                     <picture>
                         <img src="./svgs/divisor-1.svg" alt="">
-                    </picture>    
+                    </picture>
                 </div>
             </div>
 
@@ -132,23 +134,69 @@
                     <div class="title">
                         <span>¿A quiénes puedo ayudar?</span>
                     </div>
-                    <div class="items">
-                        <div class="who-can-i-help-item">
-                            <div class="image">
-                                <picture>
-                                    <img src="./svgs/person-in-love.svg" alt="">
-                                </picture>
+                    <div class="swiper my-slider-who-can-i-help items">
+                        <div class="swiper-wrapper">
+                            <!-- <div class="swiper-slide who-can-i-help-item">
+                                <div class="image">
+                                    <picture>
+                                        <img src="./svgs/person-in-love.svg" alt="">
+                                    </picture>
+                                </div>
+                                <div class="info">
+                                    <span>Para todo aquel necesitado de amor</span>
+                                </div>
                             </div>
-                            <div class="info">
-                                <span>Para todo aquel necesitado de amor</span>
+                            <div class="swiper-slide who-can-i-help-item">
+                                <div class="image">
+                                    <picture>
+                                        <img style="width: 50%;" src="./svgs/money.svg" alt="">
+                                    </picture>
+                                </div>
+                                <div class="info">
+                                    <span>Para todo aquel que ya no quiera batallar en la fortuna</span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide who-can-i-help-item">
+                                <div class="image">
+                                    <picture>
+                                        <img style="width: 50%;" src="./svgs/time.svg" alt="">
+                                    </picture>
+                                </div>
+                                <div class="info">
+                                    <span>Para todo aquel que ya no quiera batallar en la fortuna</span>
+                                </div>
+                            </div> -->
+                            <div class="swiper-slide">
+                                <div style="width: 100%; height: 10vh; background-color: red;">
+
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+
+                            </div>
+                            <div class="swiper-slide">
+
                             </div>
                         </div>
+                        <div class="swiper-pagination"></div>
                     </div>
-                </div> 
+                </div>
             </div>
+
+
         </div>
     </main>
     <footer></footer>
+
+    <script src="./js/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper(".my-slider-who-can-i-help", {
+            pagination: {
+                el: ".swiper-pagination"
+            }
+        });
+    </script>
 
     <script src="./js/index.js"></script>
 </body>
