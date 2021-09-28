@@ -297,9 +297,6 @@ body{
 .container-who-can-i-help{
     width: 100%;
     position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 .container-who-can-i-help .main-container{
     width: 100%;
@@ -308,271 +305,54 @@ body{
     background-color: rgba(54,0,25,1);
 }
 .container-who-can-i-help .main-container .title{
-    background-color: rgba(54,0,25,1);
+    width: 100%;
     display: flex;
     justify-content: center;
 }
 .container-who-can-i-help .main-container .title span{
     margin: 1rem 0;
-    font-size: 2rem;
-    font-family: monospace;
+    font-size: 1.5rem;
     color: rgb(195, 195, 195);
     font-weight: bold;
 }
 .container-who-can-i-help .main-container .items{
+    padding-bottom: 1rem;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .container-who-can-i-help .main-container .items .who-can-i-help-item{
     background-color: rgb(84, 3, 41);
     border-radius: .5rem;
-    height: 10px;
     width: 90%;
-}
-
-/*prueba*/
-.container-prueba{
-    width: 100px;
-    height: 100px;
-    background-color: green;
+    position: relative;
     display: flex;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
+    padding: 1rem;
+    box-shadow: inset .3rem .3rem 1rem rgb(17, 17, 17),
+                inset -.3rem -.3rem 1rem rgb(17, 17, 17);
 }
-.container-prueba::-webkit-scrollbar{
-    display: none;
+.container-who-can-i-help .main-container .items .who-can-i-help-item .image{
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
-.prueba1 {
+.container-who-can-i-help .main-container .items .who-can-i-help-item .image picture{
     width: 100%;
-    height: 100px;
-    background-color: red;
-    flex-grow: 0;
-    flex-shrink: 0;
-    object-fit: cover;
-    scroll-snap-align: center;
+    display: flex;
+    justify-content: center;
 }
-.prueba2 {
-    width: 100%;
-    height: 100px;
-    background-color: blue;
-    flex-grow: 0;
-    flex-shrink: 0;
-    object-fit: cover;
-    scroll-snap-align: center;
-}
-
-
-
-
-/*Animacion para logo*/
-/*
-@keyframes opacityForLogoMedusa {
-    0% {
-        opacity: 0.5;
-    }
-    50% {
-        opacity: 0.9;
-    }
-    100% {
-        opacity: 0.5;
-    }
-}
-*/
-.ground {
-    /*background: url("./images/cabin-transparent.png");*/
-    width: 100%;
-    height: 50%;
-    position: absolute;
-    bottom: 0;
-}
-.grass {
-    position: absolute;
-    width: 100%;
-    height: 1000px;
-    
-    /*
-    
-    width: 100%;
-    
-    */
-    bottom: 0;
-    left: 0;
-}
-.grass-bottom {
-    z-index: 0;
-    width: 100%;
-    height: 30%;
-    position: absolute;
-    bottom: 0;
-    background-color: rgb(21, 22, 42);
-    z-index: 3;
-}
-.grass__layer--0 {
-    z-index: 3;
-    position: absolute;
-    left: 0;
-    top: 10%;
-    width: 100%;
-    height: 100%;
-    background: url("./svgs/ground/layer-0.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    /* background: url("./svgs/ground/layer-0.svg") no-repeat center center cover;
-    background-size: contain;    */
-}
-.grass__layer--1 {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: url("./svgs/ground/layer-1.svg");
-    /* background: url("./images/landscape/layer-def-2.png"); */
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: 2;   
-}
-.grass__layer--2 {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: url("./svgs/ground/layer-2.svg");
-    /* background: url("./images/landscape/layer-def-2.png"); */
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: 1;
-}
-.house {
-    position: absolute;
-    bottom: 40%;
-    left: 40%;
-    z-index: 2;
-    width: 300px;
-    height: 300px;
-    background: url("./svgs/house.svg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-}
-.position-between-sky-and-hell {
-    width: 100%;
-    height: 50vh;
-    background: linear-gradient(180deg, rgb(21, 22, 42) 40%, rgb(154, 88, 51) 90%);
-    position: relative;
-}
-.hell {
-    width: 100%;
-    height: 150vh;
-    position: relative;
-    background: rgb(53, 30, 17);
-}
-.cave-top {
-    width: 100%;
-    height: 30vh;
-    position: relative;
-    overflow-y: visible;
-}
-.cave-layer--0 {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    z-index: 2;    
-}
-.cave-fire-layer-background {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    z-index: 0;
-}
-.cave-fire-layer-background img {
-    width: 100%;
-}
-.cave-layer--0 img {
-    width: 100%;
-}
-.cave-layer--1 {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;    
-    z-index: 1;
-}
-.cave-layer--1 img {
-    width: 100%;
-}
-.hell .surface {
-    width: 100%;
-    height: 40vh;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-}
-.hell .surface img {
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    
-}
-.area-for-person {
-    width: 200px;
-    height: 400px; 
-    position: absolute;
-    bottom: 20%;
-    left: 50%;
-}
-.area-for-person img {
-    width: 100%;
-}
-/*
-.house {
-    position: absolute;
-    bottom: 0;
-    right: 10%;
-    width: 40%;
-    height: 100%;
-    background: url("./images/house.png");
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: contain;
-    
-}
-*/
-/*color: rgb(229, 168, 122);*/
-/*
-
-*/
-/*
-.parallax__stage{
-    height: 100vh;
-    left: 0;
-    overflow: auto;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    perspective: 1;
-}
-.parallax__layer{
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
+.container-who-can-i-help .main-container .items .who-can-i-help-item .image img{
     height: 100%;
 }
-
-.parallax__layer--0{
-    background-color: rgba(0,0,0,calc(1 / 10));
-    transform: translateZ(-3px)
+.container-who-can-i-help .main-container .items .who-can-i-help-item .info{
+    width: 70%;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(195, 195, 195);
+    padding: 1rem;    
 }
-
-.parallax__layer--1{
-    background-color: rgba(0,0,0,calc(2 / 10));
-    transform: translateZ(-2px)
-}
-.parallax__layer--2{
-    background-color: rgba(0,0,0,calc(3 / 10));
-    transform: translateZ(-1px)
-}
-*/
