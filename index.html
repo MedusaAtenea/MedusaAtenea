@@ -6,8 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Medusa Atenea</title>
-    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
     <link rel="stylesheet" href="./style.css">
+
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
 </head>
 
 <body>
@@ -134,67 +135,103 @@
                     <div class="title">
                         <span>¿A quiénes puedo ayudar?</span>
                     </div>
-                    <div class="swiper">
-                        <!-- Additional required wrapper -->
-                        <div class="swiper-wrapper">
-                            <!-- Slides -->
-                            <div class="swiper-slide">Slide 1</div>
-                            <div class="swiper-slide">Slide 2</div>
-                            <div class="swiper-slide">Slide 3</div>
-                            ...
-                        </div>
-                        <!-- If we need pagination -->
-                        <div class="swiper-pagination"></div>
-
-                        <!-- If we need navigation buttons -->
-                        <div class="swiper-button-prev">
-                            <div>
+                    <div class="items">
+                        <div class="who-can-i-help-item">
+                            <div class="image">
                                 <picture>
-                                    <img src="./svgs/icons/left-arrow.svg" alt="">
+                                    <img src="./svgs/person-in-love.svg" alt="">
                                 </picture>
                             </div>
+                            <div class="info">
+                                <span>Para todo aquel necesitado de amor</span>
+                            </div>
                         </div>
-                        <div class="swiper-button-next">
-                            <div>
+                        <div class="who-can-i-help-item">
+                            <div class="image">
                                 <picture>
-                                    <img src="./svgs/icons/right-arrow.svg" alt="">
+                                    <img src="./svgs/money.svg" alt="">
                                 </picture>
+                            </div>
+                            <div class="info">
+                                <span>Para aquel que batalle en el dinero</span>
+                            </div>
+                        </div>
+                        <div class="who-can-i-help-item">
+                            <div class="image">
+                                <picture>
+                                    <img src="./svgs/time.svg" alt="">
+                                </picture>
+                            </div>
+                            <div class="info">
+                                <span>Para aquel que quiera mejorar su futuro</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
+            <div class="container-prices">
+                <div class="header-container">
+                    <span>Precios de mis productos y/o servicios</span>
+                </div>
+                <div class="main-container">
+                </div>
+            </div>
 
+            <div class="container-comments">
+                <div class="header-container">
+                    <span>Comentarios y reseñas de la calidad de mi trabajo</span>
+                </div>
+                <div class="main-container">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="comment-item">
+                                    <div class="container">
+                                        <div class="header">
+                                            <div class="profile-photo">
+                                                <picture>
+                                                    <img src="./images/profile.jpg" alt="">
+                                                </picture>
+                                            </div>
+                                            <div class="score">
+                                                <span class="">10 / 10</span>
+                                            </div>
+                                        </div>
+                                        <div class="main">
+    
+                                        </div>
+                                        <div class="footer">
+    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+            
+                        <div class="swiper-button-prev">
+                            <picture>
+                                <img src="./svgs/icons/left-arrow-black.svg" alt="">
+                            </picture>
+                        </div>
+                        <div class="swiper-button-next">
+                            <picture>
+                                <img src="./svgs/icons/right-arrow-black.svg" alt="">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
     <footer></footer>
+    
+    <script src="./js/swiper-bundle.min.js"></script>
 
     <script src="./js/index.js"></script>
 
-    <script src="./js/swiper-bundle.min.js"></script>
-
-    <script>
-        var swiper = new Swiper(".swiper", {
-            // Optional parameters
-            direction: 'horizontal',
-            loop: true,
-
-            // If we need pagination
-            pagination: {
-                el: '.swiper-pagination',
-            },
-
-            // Navigation arrows
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-
-        });
-    </script>
-
-
+    
 </body>
 
 </html>

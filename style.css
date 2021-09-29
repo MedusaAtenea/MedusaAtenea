@@ -23,7 +23,7 @@ body{
 }
 .sky .principal-info {
     width: 100%;
-    height: 93vh;
+    height: 90vh;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -302,11 +302,11 @@ body{
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 10px 0;
     background-color: rgba(54,0,25,1);
 }
 .container-who-can-i-help .main-container .title{
     width: 100%;
+    padding: 1rem;
     display: flex;
     justify-content: center;
 }
@@ -316,25 +316,23 @@ body{
     color: rgb(195, 195, 195);
     font-weight: bold;
 }
-.container-who-can-i-help .main-container .swiper{
+.container-who-can-i-help .main-container .items{
+    padding-bottom: 1rem;
     width: 100%;
-    height: calc(10vh + 18px);
-    background-color: rgba(54,0,25,1);
-    /* display: flex;
+    display: flex;
     flex-direction: column;
-    align-items: center; */
+    align-items: center;
 }
-/*
 .container-who-can-i-help .main-container .items .who-can-i-help-item{
     background-color: rgb(84, 3, 41);
-    border-radius: .5rem;   
+    border-radius: .5rem;
     margin-bottom: 1rem;
-    width: 80%;
-    height: 10vh;
+    width: 90%;
     position: relative;
     display: flex;
     padding: 1rem;
-    box-shadow: .3rem .3rem 1rem rgb(17, 17, 17);
+    box-shadow: inset .3rem .3rem 1.5rem rgb(17, 17, 17),
+                inset -.3rem -.3rem 1.5rem rgb(17, 17, 17);
 }
 .container-who-can-i-help .main-container .items .who-can-i-help-item .image{
     width: 30%;
@@ -360,27 +358,228 @@ body{
     color: rgb(195, 195, 195);
     padding: 1rem;    
 }
-*/
-
-/*Swiper*/
-.swiper-slide{
-    
+.container-prices{
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
 }
-.swiper-slide-item{
+.container-prices .header-container{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-prices .header-container span{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 3rem;
+}
+.container-prices .main-container{
+    width: 100%;
+    height: 90%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container-prices .swiper{
+    width: 100%;
+    height: 100%;
+}
+.container-prices .swiper-slide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-prices .price-item{
     width: 80%;
-    height: calc(100% - 18px);
-    background-color: rgb(84, 3, 41);
-    box-shadow: 1px 1px 10px black;
+    height: 80%;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: white;
 }
-.swiper-slide:nth-child(2) .swiper-slide-item{
-    background-color: green;
+.container-prices .price-item > .title{
+    box-shadow: 1px 1px 1rem black;
+    width: 100%;
+    height: 20%;
+    background: linear-gradient(90deg, rgb(21, 23, 122) 0%, rgb(38, 41, 224) 100%);
+    display: flex;
+    flex-direction: column;
+    color: rgb(195, 195, 195);
+    text-transform: uppercase;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
-.swiper-slide:nth-child(3) .swiper-slide-item{
+.container-prices .price-item > .title > .divisor{
+    margin-top: .5rem;
+    width: 50%;
+    height: .1rem;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
+    position: relative;
+    border: none;
+}
+.container-prices .price-item .price, .container-prices .price-item .divisor-bottom{
+    width: 100%;
+    height: 10%;
+    background: linear-gradient(90deg, rgb(29, 32, 167) 0%, rgb(43, 46, 255) 100%);
+}
+.container-prices .price-item .divisor-bottom{
+    position: relative;
+    top: -1px;
+}
+.container-prices .price-item .price{
+    position: relative;
+    top: -1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: .5rem;
+    color: rgb(195, 195, 195);
+}
+.container-prices .price-item .specs{
+    width: 100%;
+    height: 60%;
+    position: relative;
+    top: -1px;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+.container-prices .price-item .specs .title{
+    margin: 1rem 0 1rem 1rem;
+    font-weight: bold;
+}
+.container-prices .price-item .specs .content{
+    margin: 0 0 0 .5rem;
+}
+.container-prices .price-item .specs .container-choose{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+}
+.container-prices .price-item .specs .container-choose button{
+    padding: 1rem;
+    margin: 1rem;
+    border: .2rem rgb(43, 46, 255) solid;
+    border-radius: 1rem;
+    background: none;
+    color: rgb(43, 46, 255);
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.container-prices .swiper-pagination-bullet-active{
+    --swiper-theme-color: black;
+}
+.container-prices .swiper-button-prev{
+    left: 0;
+    display: none;
+}
+.container-prices .swiper-button-next{
+    right: 0;
+    display: none;
+}
+.container-prices .swiper-button-prev::after{
+    content: "";
+}
+.container-prices .swiper-button-next::after{
+    content: "";
+}
+.container-prices .swiper-slide-shadow{
+    display: none;
+}
+
+.container-comments{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(17, 17, 17);
+    display: flex;
+    flex-direction: column;
+}
+.container-comments .header-container{
+    width: 100%;
+    height: 10%;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-comments .header-container span{
+    padding-top: 3rem;
+}
+.container-comments .main-container{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-comments .swiper{
+    width: 100%;
+    height: 100%;
+}
+.container-comments .swiper-slide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-comments .comment-item{
+    width: 80%;
+    height: 40%;
+    background-color: rgb(32, 31, 31);
+    border-radius: 1rem;
+}
+.container-comments .comment-item .container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.container-comments .comment-item .header{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: row;    
+}
+.container-comments .comment-item .header .profile-photo{
+    border-radius: 2000px;
+    overflow: hidden;
+    height: 100%;   
+    border-radius: 1rem;
+}
+.container-comments .comment-item .header .profile-photo picture{
+    height: 100%; 
+}
+.container-comments .comment-item .header .profile-photo img{
+    height: 100%;
+}
+.container-comments .comment-item .header .score{
+    height: 100%;   
+}
+.container-comments .comment-item .main{
+    width: 100%;
+    flex-grow: 2;
     background-color: yellow;
 }
-#my-slider-who-can-i-help .swiper-pagination{
-    bottom: 0px;
-}
-.swiper-button-next::after, .swiper-button-prev::after {
-    content: "";
+.container-comments .comment-item .footer{
+    width: 100%;
+    flex-grow: 1;
+    background-color: green;
 }
