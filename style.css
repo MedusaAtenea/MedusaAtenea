@@ -52,9 +52,10 @@ body{
 }
 .sky .principal-info .first-half .name-of-mark span {
     color: rgba(255,255,255,1);
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 2rem;
+    font-family: 'Nunito';
     font-weight: bold;
+    font-size: 3rem;
+    /* font-weight: bold; */
     text-align: center;
 }
 .sky .principal-info .first-half .summary-of-mark {
@@ -66,7 +67,7 @@ body{
 }
 .sky .principal-info .first-half .summary-of-mark span{
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Nunito';
     text-align: center;
 }
 .sky .principal-info .first-half .submit{
@@ -85,28 +86,24 @@ body{
     padding: 1.5rem;
     font-size: 1.6rem;
     color: rgb(195, 195, 195);
+    font-family: 'Nunito';
+    /* background-color: rgb(84, 3, 41); */
+    border-radius: 2rem;
     background: none;
     cursor: pointer;
+    box-shadow: -2px -2px 8px rgba(84, 3, 41, 1),
+                -2px -2px 12px rgba(84, 3, 41, .5),
+                inset 2px 2px 4px rgba(84, 3, 41, .1),
+                2px 2px 8px rgba(0,0,0,.8);
 }
-.sky .principal-info .first-half .submit button::before{
-    border: 0.1rem rgb(84, 3, 41) solid;
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    transform: translate(-5px, -5px);
+.sky .principal-info .first-half .submit button:hover{    
+    box-shadow: inset -2px -2px 8px rgba(84, 3, 41, 1),
+                inset -2px -2px 12px rgba(84, 3, 41, .5),
+                inset 2px 2px 4px rgba(84, 3, 41, .1),
+                inset 2px 2px 8px rgba(0,0,0,.8);
 }
-.sky .principal-info .first-half .submit button::after{
-    border: 0.1rem rgb(84, 3, 41) solid;
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    transform: translate(5px, 5px);
+.sky .principal-info .first-half .submit button:hover span{
+    transform: scaleY(-10);
 }
 
 .container-slider-knowledges {
@@ -115,6 +112,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: 'Nunito';
 }
 .container-slider-knowledges .divisor-top{
     width: 110%;
@@ -317,7 +315,7 @@ body{
     font-weight: bold;
 }
 .container-who-can-i-help .main-container .items{
-    padding-bottom: 1rem;
+    padding-bottom: 3rem;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -331,8 +329,7 @@ body{
     position: relative;
     display: flex;
     padding: 1rem;
-    box-shadow: inset .3rem .3rem 1.5rem rgb(17, 17, 17),
-                inset -.3rem -.3rem 1.5rem rgb(17, 17, 17);
+    box-shadow: 1rem 1rem 2rem black;
 }
 .container-who-can-i-help .main-container .items .who-can-i-help-item .image{
     width: 30%;
@@ -404,9 +401,9 @@ body{
     flex-direction: column;
     overflow: hidden;
     background: white;
+    box-shadow: 1rem 1rem 2rem black;
 }
 .container-prices .price-item > .title{
-    box-shadow: 1px 1px 1rem black;
     width: 100%;
     height: 20%;
     background: linear-gradient(90deg, rgb(21, 23, 122) 0%, rgb(38, 41, 224) 100%);
@@ -435,7 +432,7 @@ body{
 }
 .container-prices .price-item .divisor-bottom{
     position: relative;
-    top: -1px;
+    top: 0px;
 }
 .container-prices .price-item .price{
     position: relative;
@@ -542,27 +539,30 @@ body{
 }
 .container-comments .comment-item{
     width: 80%;
-    height: 40%;
-    background-color: rgb(32, 31, 31);
+    height: 50%;
     border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 1rem 1rem 1rem black;
 }
 .container-comments .comment-item .container{
     width: 100%;
     height: 100%;
+    background-color: rgb(32, 31, 31);
     display: flex;
     flex-direction: column;
 }
 .container-comments .comment-item .header{
     width: 100%;
-    height: 30%;
+    height: 25%;
     display: flex;
-    flex-direction: row;    
+    flex-direction: row;
+    padding: 1rem;    
 }
 .container-comments .comment-item .header .profile-photo{
-    border-radius: 2000px;
     overflow: hidden;
     height: 100%;   
-    border-radius: 1rem;
+    border-radius: 100%;
+    background-color: rgb(17, 17, 17);    
 }
 .container-comments .comment-item .header .profile-photo picture{
     height: 100%; 
@@ -571,15 +571,62 @@ body{
     height: 100%;
 }
 .container-comments .comment-item .header .score{
-    height: 100%;   
+    height: 100%;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+    color: rgb(195, 195, 195);
 }
 .container-comments .comment-item .main{
     width: 100%;
-    flex-grow: 2;
-    background-color: yellow;
+    height: 60%;
+    color: rgb(195, 195, 195);
+    font-size: 1.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.container-comments .comment-item .main span{
+    padding: 1rem;
 }
 .container-comments .comment-item .footer{
     width: 100%;
-    flex-grow: 1;
-    background-color: green;
+    height: 15%;
+    font-size: 1.3rem;
+    color: rgb(195, 195, 195);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.container-comments .comment-item .footer span{
+    padding: 1rem;
+}
+.container-comments .swiper-pagination-bullet-active{
+    --swiper-theme-color: white;
+}
+.container-comments .swiper-button-prev{
+    left: 0;
+    display: none;
+}
+.container-comments .swiper-button-next{
+    right: 0;
+    display: none;
+}
+.container-comments .swiper-button-prev::after{
+    content: "";
+}
+.container-comments .swiper-button-next::after{
+    content: "";
+}
+.container-comments .swiper-slide-shadow{
+    display: none;
+}
+
+body footer{
+    width: 100%;
+    height: 20vh;
+    background: linear-gradient(180deg, rgb(17, 17, 17) 0%, rgba(54,0,25,1) 100%);
 }

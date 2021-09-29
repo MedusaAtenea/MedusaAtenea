@@ -174,6 +174,26 @@ let allData = {
                 choose: "Comprar"
             }
         }
+    ],
+    comments: [
+        {
+            profilePhotoUrl: "./images/profile.jpg",
+            starsOfFive: 5,
+            comment: "Increíble haber conocido a Medusa Atenea. Me resolvió muchas dudas que tenía.",
+            infoOfUser: "Alonso Ramírez Páez. Desde facebook."
+        },
+        {
+            profilePhotoUrl: "",
+            starsOfFive: 2,
+            comment: "No me agrado completamente sus servicios, pero aún así, cumple.",
+            infoOfUser: "Angel Gabriel Hernández Hernández. Desde Whatsapp."
+        },
+        {
+            profilePhotoUrl: "",
+            starsOfFive: 0,
+            comment: "Pesimo servicio",
+            infoOfUser: "Abraham Ramírez Páez. Desde Instagram."
+        }
     ]
 }
 
@@ -234,23 +254,23 @@ let events = {
         }
 
         let contenidoPadre = `
-        <div class="swiper">
-            <div class="swiper-wrapper">
-                ${contenidoHijo}
-            </div>
-            <div class="swiper-pagination"></div>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    ${contenidoHijo}
+                </div>
+                <div class="swiper-pagination"></div>
 
-            <div class="swiper-button-prev">
-                <picture>
-                    <img src="./svgs/icons/left-arrow-black.svg" alt="">
-                </picture>
+                <div class="swiper-button-prev">
+                    <picture>
+                        <img src="./svgs/icons/left-arrow-black.svg" alt="">
+                    </picture>
+                </div>
+                <div class="swiper-button-next">
+                    <picture>
+                        <img src="./svgs/icons/right-arrow-black.svg" alt="">
+                    </picture>
+                </div>
             </div>
-            <div class="swiper-button-next">
-                <picture>
-                    <img src="./svgs/icons/right-arrow-black.svg" alt="">
-                </picture>
-            </div>
-        </div>
         `
 
         let elemento = document.querySelector(".container-prices .main-container");
@@ -282,7 +302,7 @@ let events = {
         allData.prices.forEach((element, index) => {
             //element.colors
             actualElement = document.querySelector(`.container-prices .main-container .swiper-slide:nth-child(${index + 1}) .price-item .title`);
-            
+
             actualElement.style.background = element.colors.title;
 
             actualElement = document.querySelector(`.container-prices .main-container .swiper-slide:nth-child(${index + 1}) .price-item .price`);
@@ -302,6 +322,111 @@ let events = {
 
             // actualElement.style.backgroundColor = element.colors.buttonChoose.color;
         })
+    },
+    printComments: () => {
+        let contenidoHijo = ``;
+        let contenidoDeEstrellas = ``;
+
+        for (let i = 0; i < allData.comments.length; i++) {
+            contenidoDeEstrellas = ``;
+
+            for (let j = 1; j <= allData.comments[i].starsOfFive; j++) {
+                contenidoDeEstrellas += `
+                    <picture>
+                        <img src="./svgs/icons/star.svg" alt="">
+                    </picture>
+                `
+            }
+
+            for (let j = 1; j <= (5 - allData.comments[i].starsOfFive); j++) {
+                contenidoDeEstrellas += `
+                    <picture>
+                        <img src="./svgs/icons/star-void.svg" alt="">
+                    </picture>
+                `
+            }
+
+            contenidoHijo += `
+                <div class="swiper-slide">
+                    <div class="comment-item">
+                        <div class="container">
+                            <div class="header">
+                                <div class="profile-photo">
+                                    <picture>
+                                        <img src="${allData.comments[i].profilePhotoUrl}" alt="">
+                                    </picture>
+                                </div>
+                                <div class="score">
+                                    ${contenidoDeEstrellas}
+                                </div>
+                            </div>
+                            <div class="main">
+                                <span>"${allData.comments[i].comment}"</span>
+                            </div>
+                            <div class="footer">
+                                <span>${allData.comments[i].infoOfUser}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `
+        }
+
+        let contenidoPadre = `
+            <div class="swiper swiper-for-container-comments">
+                <div class="swiper-wrapper">
+                    ${contenidoHijo}
+                </div>
+                <div class="swiper-pagination"></div>
+
+                <div class="swiper-button-prev">
+                    <picture>
+                        <img src="./svgs/icons/left-arrow-black.svg" alt="">
+                    </picture>
+                </div>
+                <div class="swiper-button-next">
+                    <picture>
+                        <img src="./svgs/icons/right-arrow-black.svg" alt="">
+                    </picture>
+                </div>
+            </div>
+        `
+
+        let elemento = document.querySelector(".container-comments .main-container");
+        elemento.innerHTML = contenidoPadre;
+
+        const secondSwiper = new Swiper('.swiper-for-container-comments', {
+            // Optional parameters
+            effect: "coverflow",
+            loop: true,
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: false,
+            },
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        });
+
     }
 }
 
@@ -348,6 +473,7 @@ window.addEventListener("scroll", () => {
 
 window.addEventListener("load", () => {
     events.printPrices();
+    events.printComments();
 
     let previousButtons = [...document.querySelectorAll(".container-slider-knowledges .second-container .menu .buttons .button-slider.previous")]
     let nextButtons = [...document.querySelectorAll(".container-slider-knowledges .second-container .menu .buttons .button-slider.next")]
