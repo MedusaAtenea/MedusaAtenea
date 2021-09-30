@@ -1,0 +1,41 @@
+@media screen and (min-height: 600px){
+    .container-prices .price-item{
+        height: 70%;
+    }
+}
+@media screen and (min-height: 800px){
+    .container-prices .price-item{
+        height: 60%;
+    }
+}
+@media screen and (min-height: 1000px){
+    .container-prices .price-item{
+        height: 50%;
+    }
+}
+@media screen and (min-height: 1200px){
+    .container-prices .price-item{
+        height: 40%;
+    }
+}
+
+@media screen and (min-height: 600px){
+    .container-comments .comment-item{
+        height: 40%;
+    }
+}
+@media screen and (min-height: 800px){
+    .container-comments .comment-item{
+        /* height: 30%; */
+    }
+}
+@media screen and (min-height: 1200px){
+    .container-comments .comment-item{
+        height: 30%;
+    }
+}
+@media screen and (min-height: 2000px){
+    .container-comments .comment-item{
+        height: 25%;
+    }
+}

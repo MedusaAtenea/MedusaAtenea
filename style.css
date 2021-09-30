@@ -107,7 +107,6 @@ body{
 }
 
 .container-slider-knowledges {
-    padding-top: 2rem;
     width: 100%;
     position: relative;
     display: flex;
@@ -118,7 +117,7 @@ body{
 .container-slider-knowledges .divisor-top{
     width: 110%;
     z-index: 2;
-    position: absolute;
+    position: relative;
     top: -.5rem; 
 }
 .container-slider-knowledges .divisor-top picture{
@@ -130,7 +129,7 @@ body{
 .container-slider-knowledges .title-for-slider{
     width: 100%;
     background-color: rgb(17, 17, 17);
-    padding-top: 6rem;
+    padding-top: 0;
     padding-bottom: 2rem;
     display: flex;
     flex-direction: column;
@@ -144,7 +143,7 @@ body{
     width: 100%;
     background-color: rgb(17, 17, 17);
     padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-bottom: 0;
     display: flex;
     flex-direction: column;
     align-items: center;

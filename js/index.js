@@ -280,7 +280,7 @@ let events = {
             // Optional parameters
             direction: 'horizontal',
             effect: "cards",
-
+            grabCursor: true,
             // If we need pagination
             pagination: {
                 el: '.swiper-pagination',

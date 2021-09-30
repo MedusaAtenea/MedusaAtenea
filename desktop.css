@@ -1,9 +1,6 @@
 .sky .principal-info{
     height: 100vh;
 }
-.container-slider-knowledges{
-    padding-top: 10rem;
-}
 .container-slider-knowledges .main-container{
     flex-direction: row;
     flex-wrap: wrap;
@@ -36,26 +33,6 @@
 .container-prices .price-item{
     width: 55%;
 }
-@media screen and (min-height: 600px){
-    .container-prices .price-item{
-        height: 70%;
-    }
-}
-@media screen and (min-height: 800px){
-    .container-prices .price-item{
-        height: 60%;
-    }
-}
-@media screen and (min-height: 1000px){
-    .container-prices .price-item{
-        height: 50%;
-    }
-}
-@media screen and (min-height: 1200px){
-    .container-prices .price-item{
-        height: 40%;
-    }
-}
 .container-comments{
     flex-direction: row-reverse;
 }
@@ -69,24 +46,4 @@
 }
 .container-comments .comment-item{
     width: 55%;
-}
-@media screen and (min-height: 600px){
-    .container-comments .comment-item{
-        height: 40%;
-    }
-}
-@media screen and (min-height: 800px){
-    .container-comments .comment-item{
-        /* height: 30%; */
-    }
-}
-@media screen and (min-height: 1200px){
-    .container-comments .comment-item{
-        height: 30%;
-    }
-}
-@media screen and (min-height: 2000px){
-    .container-comments .comment-item{
-        height: 25%;
-    }
 }
