@@ -10,7 +10,7 @@ body{
     font-size: 1.6rem;
     /* background: linear-gradient(180deg, rgba(0,0,0,1) 40%, rgba(54,0,25,1) 90%); */
     background: rgb(17, 17, 17);
-    font-family: sans-serif;
+    font-family: 'Nunito';
 }
 
 .sky {
@@ -107,6 +107,7 @@ body{
 }
 
 .container-slider-knowledges {
+    padding-top: 2rem;
     width: 100%;
     position: relative;
     display: flex;
@@ -201,23 +202,10 @@ body{
 }
 */
 .container-slider-knowledges .second-container:nth-child(2n){
-    background-color: rgba(54,0,25,1);
-}
-
-.container-slider-knowledges .second-container:nth-child(2n){
     flex-direction: row-reverse;
 }
 .container-slider-knowledges .second-container .image{
     width: 40%;
-    background-color: rgb(17, 17, 17);
-}
-.container-slider-knowledges .second-container .image picture{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.container-slider-knowledges .second-container .image img{
-    width: 100%;
 }
 .container-slider-knowledges .second-container .info{
     width: 60%;
@@ -225,7 +213,7 @@ body{
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 1rem .5rem;
+    padding: 2rem .5rem;
 }
 
 .container-slider-knowledges .second-container.first {
@@ -295,6 +283,7 @@ body{
 .container-who-can-i-help{
     width: 100%;
     position: relative;
+    font-family: 'Nunito';
 }
 .container-who-can-i-help .main-container{
     width: 100%;
@@ -310,9 +299,8 @@ body{
 }
 .container-who-can-i-help .main-container .title span{
     margin: 1rem 0;
-    font-size: 1.5rem;
     color: rgb(195, 195, 195);
-    font-weight: bold;
+    font-weight: bolder;
 }
 .container-who-can-i-help .main-container .items{
     padding-bottom: 3rem;
@@ -324,12 +312,12 @@ body{
 .container-who-can-i-help .main-container .items .who-can-i-help-item{
     background-color: rgb(84, 3, 41);
     border-radius: .5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     width: 90%;
     position: relative;
     display: flex;
     padding: 1rem;
-    box-shadow: 1rem 1rem 2rem black;
+    box-shadow: 2px 2px 8px rgba(0,0,0,.8);
 }
 .container-who-can-i-help .main-container .items .who-can-i-help-item .image{
     width: 30%;
@@ -341,13 +329,14 @@ body{
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .container-who-can-i-help .main-container .items .who-can-i-help-item .image img{
     height: 100%;
+    width: 50%;
 }
 .container-who-can-i-help .main-container .items .who-can-i-help-item .info{
     width: 70%;
-    font-size: 1.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -361,6 +350,7 @@ body{
     background-color: white;
     display: flex;
     flex-direction: column;
+    font-family: 'Nunito';
 }
 .container-prices .header-container{
     width: 100%;
@@ -370,7 +360,6 @@ body{
     align-items: center;
 }
 .container-prices .header-container span{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 2rem;
     text-align: center;
     font-weight: bold;
@@ -511,7 +500,7 @@ body{
     width: 100%;
     height: 10%;
     color: white;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Nunito';
     font-size: 2rem;
     text-align: center;
     display: flex;
@@ -562,6 +551,7 @@ body{
     overflow: hidden;
     height: 100%;   
     border-radius: 100%;
+    margin-left: 1rem;
     background-color: rgb(17, 17, 17);    
 }
 .container-comments .comment-item .header .profile-photo picture{
@@ -603,6 +593,7 @@ body{
 }
 .container-comments .comment-item .footer span{
     padding: 1rem;
+    font-weight: 100;
 }
 .container-comments .swiper-pagination-bullet-active{
     --swiper-theme-color: white;
@@ -628,5 +619,5 @@ body{
 body footer{
     width: 100%;
     height: 20vh;
-    background: linear-gradient(180deg, rgb(17, 17, 17) 0%, rgba(54,0,25,1) 100%);
+    background: linear-gradient(180deg, rgb(17, 17, 17) 0%, black 90%);
 }

@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap');
+
+.footer{
+    width:100%;
+    display: flex;
+    height: 40vh;
+    background-color: black;
+    color:white;
+    justify-content: center;
+    align-items: center;
+}
+.footer .social_media .title_menu_footer{
+    padding: 5px;
+    font-family: 'Play', sans-serif;
+    border-bottom: 3px solid red;
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: 60px;
+}
+.footer .social_media ul{
+    display:flex;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+
+@media (max-width: 700px){
+    .footer{    
+        
+        display: flex;
+     /*   background-color: blue;*/
+        height: 400px;
+    }
+    .footer .social_media{
+        
+        /*background-color: red;*/
+        
+    }
+    .footer .social_media ul{
+        /*background-color: yellow;*/
+        display:flex;
+        height: 300px;
+        
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+}
+
+.footer .social_media ul li{
+    position: relative;
+    list-style: none;
+    width: 50px;
+    height: 50px;
+    margin: 0 30px;
+    transform: rotate(-30deg) skew(25deg);
+}
+.footer .social_media ul li span{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    background-color: black;
+    font-size: 30px !important;
+
+}
+.footer .social_media ul li:hover span:nth-child(5){
+    transform: translate(40px,-40px);
+    opacity: 1;
+}
+
+
+.footer .social_media ul li:hover span:nth-child(4){
+    transform: translate(30px,-30px);
+    opacity: .8;
+}
+
+.footer .social_media ul li:hover span:nth-child(3){
+    transform: translate(20px,-20px);
+    opacity: .6;
+}
+
+
+.footer .social_media ul li:hover span:nth-child(2){
+    transform: translate(10px,-10px);
+    opacity: .4;
+}
+
+.footer .social_media ul li:hover span:nth-child(1){
+    transform: translate(0,0);
+    opacity: .2;
+}
+/****************************/
+
+.footer .social_media ul li:hover:nth-child(1) span{
+    background-color: #3b5999;
+}
+
+.footer .social_media ul li:hover:nth-child(2) span{
+    background-color: #55acee;
+}
+
+.footer .social_media ul li:hover:nth-child(3) span{
+    background-color: #25d366;
+}

@@ -1,0 +1,27 @@
+.sky .principal-info{
+    height: 85vh;
+}
+.container-slider-knowledges{
+    padding-top: 5rem;
+}
+.container-slider-knowledges .second-container .info{
+    min-height: 20vh;
+}
+.container-who-can-i-help .main-container .title span{
+    margin: 1rem 0 2rem 0;
+}
+.container-who-can-i-help .main-container .items{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.container-who-can-i-help .main-container .items .who-can-i-help-item{
+    width: 42.5%;
+}
+.container-prices .price-item{
+    width: 65%;
+}
+.container-comments .comment-item{
+    width: 65%;
+}
