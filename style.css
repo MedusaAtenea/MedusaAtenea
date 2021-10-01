@@ -596,6 +596,9 @@ body{
     padding: 1rem;
     font-weight: 100;
 }
+.container-comments .swiper-pagination-bullet{
+    opacity: 1;
+}
 .container-comments .swiper-pagination-bullet-active{
     --swiper-theme-color: white;
 }
